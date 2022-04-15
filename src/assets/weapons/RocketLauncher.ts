@@ -9,7 +9,10 @@ weapon:Phaser.GameObjects.Shape;
         //let weapon = scene.add.line(x,y,12,12,4,4)
         let distancefromenemy = Phaser.Math.Distance.Between(x,y,enemy.circle.x,enemy.circle.y)
         this.weapon = scene.add.line(x,y,distancefromenemy,0,0,0)
+        
         this.weapon.setOrigin(0,0)
+        
+      
         this.weapon.setStrokeStyle(1,0x05F9FB)
         console.log("------------")
         console.log(x)
@@ -25,8 +28,8 @@ weapon:Phaser.GameObjects.Shape;
 
             let distancefromenemy = Phaser.Math.Distance.Between(player.weapon.x,player.weapon.y,enemy.circle.x,enemy.circle.y)
             this.weapon.rotation = Phaser.Math.Angle.Between(player.weapon.x,player.weapon.y,enemy.circle.x + this.scene.cameras.main.scrollX,enemy.circle.y + this.scene.cameras.main.scrollY)
-            //this.weapon.lineWidth = 5;
-            console.log(player.weapon.x)
+            this.weapon.setTo(0,0,distancefromenemy,0)
+            
             console.log(distancefromenemy)
 
         }
