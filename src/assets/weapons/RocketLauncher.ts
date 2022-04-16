@@ -12,7 +12,7 @@ weapon:Phaser.GameObjects.Shape;
         this.weapon = scene.add.line(x,y,distancefromenemy,0,0,0)
         
         this.weapon.setOrigin(0,0)
-        
+        this.weapon.lineWidth = 0.02
       
         this.weapon.setStrokeStyle(1,0x05F9FB)
 
@@ -21,7 +21,7 @@ weapon:Phaser.GameObjects.Shape;
             targets: this.weapon,
             alpha: 0,
             ease: 'Cubic.easeOut',  
-            duration: 50,
+            duration: 40,
             repeat: -1,
             yoyo: true
       

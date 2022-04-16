@@ -4,6 +4,7 @@ export default {
   type: Phaser.AUTO,
   parent: 'game',
   backgroundColor: '#000000',
+  antialias:true,
   scale: {
     width: 800,
     height: 600,
