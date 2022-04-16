@@ -14,8 +14,8 @@ circle;
    this.tween = scene.tweens.add({
 
         targets: this.circle,
-        x: 560,
-        y: 200,
+        x: 700,
+        y: 500,
         ease: 'Power1',
         duration: 3000,
         yoyo:true,
