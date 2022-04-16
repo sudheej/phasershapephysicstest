@@ -14,10 +14,10 @@ circle;
    this.tween = scene.tweens.add({
 
         targets: this.circle,
-        x: 700,
+        x: 800,
         y: 500,
-        ease: 'Power1',
-        duration: 5000,
+        ease: 'easing',
+        duration: 15000,
         yoyo:true,
         repeat: -1
   

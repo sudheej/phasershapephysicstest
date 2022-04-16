@@ -15,7 +15,7 @@ speed = 1
             enemy.circle.x, enemy.circle.y
         )
         let diff = Phaser.Math.Angle.Wrap(targetAngle - this.rocket.rotation)
-        console.log(diff)
+        
 
         // set to targetAngle if less than turnDegreesPerFrame
 	if (Math.abs(diff) < Phaser.Math.DegToRad(this.turnDegreesPerFrame))
@@ -44,11 +44,21 @@ speed = 1
 
 	//this.body.velocity.x = vx
 	//this.body.velocity.y = vy
-    console.log(vx)
+  
     this.rocket.setX(this.rocket.x + vx)
     this.rocket.setY(this.rocket.y + vy)
 
         //this.rocket.setX(this.rocket.x + 1)
+    
+    //reset position when hit the enemy
+
+
+    if(Math.abs(this.rocket.x - enemy.circle.x) < 2 && Math.abs(this.rocket.y - enemy.circle.y) < 2){
+        console.log("I am hit")
+        this.rocket.x = 0
+        this.rocket.y = 0
+
+    }
     }
 
 
